@@ -1,4 +1,4 @@
-﻿namespace NewMaking.Models
+﻿namespace NewsMaking.DesktopApp.Models
 {
 				/// <summary>
 				/// Provides all the necessary fields to create a plugin for News Making Desktop Application.

@@ -1,8 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using NewMaking.Models;
+using NewsMaking.DesktopApp.Models;
 using System.Collections.ObjectModel;
 
-namespace NewsMaking.ViewModels
+namespace NewsMaking.DesktopApp.ViewModels
 {
 				public class PluginsViewModel : ObservableObject
 				{
