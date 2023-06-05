@@ -7,4 +7,9 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NewMaking.Models\NewMaking.Models.csproj" />
+    <ProjectReference Include="..\NewsMaking.ViewModels\NewsMaking.ViewModels.csproj" />
+  </ItemGroup>
+
 </Project>
