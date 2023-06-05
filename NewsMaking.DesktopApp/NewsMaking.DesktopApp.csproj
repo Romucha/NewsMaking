@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\NewMaking.Models\NewMaking.Models.csproj" />
     <ProjectReference Include="..\NewsMaking.ViewModels\NewsMaking.ViewModels.csproj" />
   </ItemGroup>
