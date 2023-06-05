@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NewsMaking.DesktopApp
+namespace NewsMaking.DesktopApp.Views
 {
 				/// <summary>
 				/// Interaction logic for MainWindow.xaml
