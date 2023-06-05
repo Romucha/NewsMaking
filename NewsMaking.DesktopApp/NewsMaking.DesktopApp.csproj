@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NewMaking.Models\NewMaking.Models.csproj" />
-    <ProjectReference Include="..\NewsMaking.ViewModels\NewsMaking.ViewModels.csproj" />
+    <ProjectReference Include="..\NewMaking.DesktopApp.Models\NewsMaking.DesktopApp.Models.csproj" />
+    <ProjectReference Include="..\NewsMaking.DesktopApp.ViewModels\NewsMaking.DesktopApp.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

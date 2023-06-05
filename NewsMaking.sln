@@ -7,13 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsMaking.Server", "NewsMa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsMaking.DataManagement", "NewsMaking.DataManagement\NewsMaking.DataManagement.csproj", "{A67676AB-4A0C-4C3F-9A4D-651602D9D2B8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewMaking.Models", "NewMaking.Models\NewMaking.Models.csproj", "{75860D56-74F3-4017-9CCE-A5A480211D28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsMaking.DesktopApp.Models", "NewsMaking.DesktopApp.Models\NewsMaking.DesktopApp.Models.csproj", "{75860D56-74F3-4017-9CCE-A5A480211D28}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsMaking.Receiver", "NewsMaking.Receiver\NewsMaking.Receiver.csproj", "{A9F51171-4B68-4038-9C90-F8253F8207DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsMaking.DesktopApp", "NewsMaking.DesktopApp\NewsMaking.DesktopApp.csproj", "{528897CD-C837-4270-BCD3-4945381714B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsMaking.DesktopApp", "NewsMaking.DesktopApp\NewsMaking.DesktopApp.csproj", "{528897CD-C837-4270-BCD3-4945381714B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsMaking.ViewModels", "NewsMaking.ViewModels\NewsMaking.ViewModels.csproj", "{1FD9BC13-809B-40D2-A6B3-1ACA94ED3D22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsMaking.DesktopApp.ViewModels", "NewsMaking.DesktopApp.ViewModels\NewsMaking.DesktopApp.ViewModels.csproj", "{1FD9BC13-809B-40D2-A6B3-1ACA94ED3D22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

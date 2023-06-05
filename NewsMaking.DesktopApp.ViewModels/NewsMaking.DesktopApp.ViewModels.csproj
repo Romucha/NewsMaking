@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NewMaking.Models\NewMaking.Models.csproj" />
+    <ProjectReference Include="..\NewMaking.DesktopApp.Models\NewsMaking.DesktopApp.Models.csproj" />
   </ItemGroup>
 
 </Project>
