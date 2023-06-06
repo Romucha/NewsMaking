@@ -24,5 +24,15 @@ namespace NewsMaking.DesktopApp.Views
 								{
 												InitializeComponent();
 								}
-				}
+
+								private void OpenAppMenuItem_Click(object sender, RoutedEventArgs e)
+								{
+												new MainDisplayView().Show();
+        }
+
+								private void ExitMenuItem_Click(object sender, RoutedEventArgs e)
+								{
+												Application.Current.Shutdown();
+        }
+    }
 }

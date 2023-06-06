@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NewsMaking.DesktopApp.Views"
+        xmlns:viewmodels="clr-namespace:NewsMaking.DesktopApp.ViewModels;assembly=NewsMaking.DesktopApp.ViewModels"
         mc:Ignorable="d"
 								Icon="pack://application:,,,/Images/NewsMakingIcon.ico"
 								xmlns:tb="http://www.hardcodet.net/taskbar"
@@ -11,13 +12,21 @@
 								ShowInTaskbar="False"
 								WindowState="Minimized"
         Title="News Making Desktop Application" 
-								Height="450" Width="800">
+								Height="450" Width="800"
+								x:Name="NewsMainWindow">
     <Grid>
-								<tb:TaskbarIcon x:Name="DesktopTrayIcon"
-                    Visibility="Visible"
-                    ToolTipText="News Making Desktop App"
-                    IconSource="pack://application:,,,/Images/NewsMakingIcon.ico"
-                    PopupActivation="DoubleClick"
-      />
+								<tb:TaskbarIcon 
+												x:Name="DesktopTrayIcon"
+            Visibility="Visible"
+            ToolTipText="News Making Desktop App"
+            IconSource="pack://application:,,,/Images/NewsMakingIcon.ico"
+            PopupActivation="DoubleClick">
+												<tb:TaskbarIcon.ContextMenu>
+																<ContextMenu>
+																				<MenuItem x:Name="OpenAppMenuItem" Header="Open app" Click="OpenAppMenuItem_Click" />
+																				<MenuItem x:Name="ExitMenuItem" Header="Exit" Click="ExitMenuItem_Click"/>
+																</ContextMenu>
+												</tb:TaskbarIcon.ContextMenu>
+								</tb:TaskbarIcon>
 				</Grid>
 </Window>
