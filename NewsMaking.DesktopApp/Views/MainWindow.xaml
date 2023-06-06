@@ -5,16 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NewsMaking.DesktopApp.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+								Icon="pack://application:,,,/Images/NewsMakingIcon.ico"
+								xmlns:tb="http://www.hardcodet.net/taskbar"
+								Visibility="Hidden"
+								ShowInTaskbar="False"
+								WindowState="Minimized"
+        Title="News Making Desktop Application" 
+								Height="450" Width="800">
     <Grid>
-								<Grid.ColumnDefinitions>
-												<ColumnDefinition Width="auto"/>
-												<ColumnDefinition Width="*"/>
-								</Grid.ColumnDefinitions>
-								<Grid.RowDefinitions>
-												<RowDefinition Height="*"/>
-								</Grid.RowDefinitions>
-								<local:PluginListView Grid.Row="0" Grid.Column="0"/>
-								<local:PluginContentView Grid.Row="0" Grid.Column="1"/>
+								<tb:TaskbarIcon x:Name="DesktopTrayIcon"
+                    Visibility="Visible"
+                    ToolTipText="News Making Desktop App"
+                    IconSource="pack://application:,,,/Images/NewsMakingIcon.ico"
+                    PopupActivation="DoubleClick"
+      />
 				</Grid>
 </Window>
