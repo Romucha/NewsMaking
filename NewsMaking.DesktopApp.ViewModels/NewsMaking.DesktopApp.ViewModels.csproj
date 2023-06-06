@@ -11,7 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NewMaking.DesktopApp.Models\NewsMaking.DesktopApp.Models.csproj" />
     <ProjectReference Include="..\NewsMaking.DesktopApp.Models\NewsMaking.DesktopApp.Models.csproj" />
   </ItemGroup>
 

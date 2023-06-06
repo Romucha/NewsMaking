@@ -9,13 +9,14 @@
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
+    <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.16" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Wpf" Version="6.0.553" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NewMaking.DesktopApp.Models\NewsMaking.DesktopApp.Models.csproj" />
+    <ProjectReference Include="..\NewsMaking.DesktopApp.Models\NewsMaking.DesktopApp.Models.csproj" />
     <ProjectReference Include="..\NewsMaking.DesktopApp.ViewModels\NewsMaking.DesktopApp.ViewModels.csproj" />
   </ItemGroup>
 
