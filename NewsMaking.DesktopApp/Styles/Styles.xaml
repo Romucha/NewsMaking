@@ -2,7 +2,7 @@
 																				xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework"
 																				xmlns:local="clr-namespace:NewsMaking.DesktopApp.Views"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-				<Style x:Key="{x:Type local:MainWindow}" TargetType="{x:Type local:MainWindow}">
+				<!--<Style x:Key="{x:Type local:MainWindow}" TargetType="{x:Type local:MainWindow}">
 								<Setter Property="shell:WindowChrome.WindowChrome">
 												<Setter.Value>
 																<shell:WindowChrome />
@@ -12,7 +12,7 @@
 												<Setter.Value>
 																<ControlTemplate TargetType="{x:Type local:MainWindow}">
 																				<Grid>
-																								<Border Background="White">
+																								<Border Background="Transparent">
 																												<ContentPresenter Content="{TemplateBinding Content}" />
 																								</Border>
 																								<TextBlock Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title}"   
@@ -27,5 +27,5 @@
 																</ControlTemplate>
 												</Setter.Value>
 								</Setter>
-				</Style>
+				</Style>-->
 </ResourceDictionary>

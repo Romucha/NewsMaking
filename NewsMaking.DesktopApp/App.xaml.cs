@@ -29,7 +29,7 @@ namespace NewsMaking.DesktopApp
 								/// <summary>
 								/// Gets the <see cref="IServiceProvider"/> instance to resolve application services.
 								/// </summary>
-								public IServiceProvider Services { get; }
+								public static IServiceProvider Services { get; private set; }
 
 								/// <summary>
 								/// Configures the services for the application.
@@ -44,7 +44,7 @@ namespace NewsMaking.DesktopApp
 												services.AddSingleton<IShareService, ShareService>();
 												services.AddSingleton<IEmailService, EmailService>();
 												*/
-												services.AddBlazorWebView();
+												services.AddWpfBlazorWebView();
 												return services.BuildServiceProvider();
 								}
 				}
