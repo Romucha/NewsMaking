@@ -20,11 +20,12 @@
             Visibility="Visible"
             ToolTipText="News Making Desktop App"
             IconSource="pack://application:,,,/Images/NewsMakingIcon.ico"
-            PopupActivation="DoubleClick">
+            PopupActivation="DoubleClick"
+												LeftClickCommand="{Binding OpenExpressPanelViewCommand}">
 												<tb:TaskbarIcon.ContextMenu>
 																<ContextMenu>
-																				<MenuItem x:Name="OpenAppMenuItem" Header="Open app" Click="OpenAppMenuItem_Click" />
-																				<MenuItem x:Name="ExitMenuItem" Header="Exit" Click="ExitMenuItem_Click"/>
+																				<MenuItem x:Name="OpenAppMenuItem" Header="Open app" Command="{Binding OpenMainDisplayViewCommand}" />
+																				<MenuItem x:Name="ExitMenuItem" Header="Exit" Command="{Binding ApplicationShutdownCommand}"/>
 																</ContextMenu>
 												</tb:TaskbarIcon.ContextMenu>
 								</tb:TaskbarIcon>

@@ -6,6 +6,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
+using NewsMaking.DesktopApp.Models;
+using NewsMaking.DesktopApp.ViewModels;
 
 namespace NewsMaking.DesktopApp
 {
@@ -44,6 +46,8 @@ namespace NewsMaking.DesktopApp
 												services.AddSingleton<IShareService, ShareService>();
 												services.AddSingleton<IEmailService, EmailService>();
 												*/
+												services.AddTransient<IMainActions, MainActions>();
+												services.AddTransient<MainViewModel>();
 												services.AddWpfBlazorWebView();
 												return services.BuildServiceProvider();
 								}

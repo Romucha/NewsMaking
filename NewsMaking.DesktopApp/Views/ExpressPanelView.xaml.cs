@@ -1,6 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Input;
-using NewsMaking.DesktopApp.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,22 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace NewsMaking.DesktopApp.Views
 {
 				/// <summary>
-				/// Interaction logic for MainWindow.xaml
+				/// Логика взаимодействия для ExpressPanelView.xaml
 				/// </summary>
-				public partial class MainWindow : Window
+				public partial class ExpressPanelView : Window
 				{
-								public MainWindow()
+								public ExpressPanelView()
 								{
 												InitializeComponent();
-												DataContext = App.Services.GetService(typeof(MainViewModel));
 								}
-
-								private MainViewModel ViewModel => (MainViewModel)DataContext;
 				}
 }
