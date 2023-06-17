@@ -3,9 +3,30 @@
 																				xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework"
 																				xmlns:local="clr-namespace:NewsMaking.DesktopApp.Views"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+				<!--colors-->
+				<SolidColorBrush x:Key="BasicWindowColor" Color="WhiteSmoke"/>
+				<SolidColorBrush x:Key="TitleWindowButtonColor" Color="WhiteSmoke"/>
+
+				<!--title button-->
+				<Style x:Key="WindowTitleButton" TargetType="{x:Type Button}">
+								<Setter Property="Background" Value="{StaticResource TitleWindowButtonColor}"/>
+								<Setter Property="shell:WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
+								<Setter Property="HorizontalAlignment" Value="Right"/>
+								<Setter Property="VerticalAlignment" Value="Top"/>
+								<Setter Property="HorizontalContentAlignment" Value="Center"/>
+								<Setter Property="VerticalContentAlignment" Value="Center"/>
+								<Setter Property="Margin" Value="0"/>
+								<Setter Property="Padding" Value="10"/>
+								<Setter Property="BorderThickness" Value="0"/>
+				</Style>
+
+				<!--main display window-->
 				<Style x:Key="{x:Type local:MainDisplayView}" TargetType="{x:Type local:MainDisplayView}">
+								<Setter Property="Width" Value="800"/>
+								<Setter Property="Height" Value="600"/>
 								<Setter Property="WindowStyle" Value="None"/>
 								<Setter Property="ResizeMode" Value="NoResize"/>
+								<Setter Property="shell:WindowChrome.CornerRadius" Value="{x:Static SystemParameters.WindowCornerRadius}"/>
 								<Setter Property="shell:WindowChrome.WindowChrome">
 												<Setter.Value>
 																<shell:WindowChrome />
@@ -14,43 +35,45 @@
 								<Setter Property="Template">
 												<Setter.Value>
 																<ControlTemplate TargetType="{x:Type Window}">
-																				<Grid Background="WhiteSmoke">
-																								<Grid.ColumnDefinitions>
-																												<ColumnDefinition Width="auto"/>
-																												<ColumnDefinition Width="*"/>
-																								</Grid.ColumnDefinitions>
-																								<Grid.RowDefinitions>
-																												<RowDefinition Height="auto"/>
-																												<RowDefinition Height="*"/>
-																								</Grid.RowDefinitions>
-																								<WrapPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top">
-																												<Image 
+																				<Border 
+																								Background="{StaticResource BasicWindowColor}"
+																								CornerRadius="{x:Static SystemParameters.WindowCornerRadius}">
+																								<Grid>
+																												<Grid.ColumnDefinitions>
+																																<ColumnDefinition Width="auto"/>
+																																<ColumnDefinition Width="*"/>
+																												</Grid.ColumnDefinitions>
+																												<Grid.RowDefinitions>
+																																<RowDefinition Height="auto"/>
+																																<RowDefinition Height="*"/>
+																												</Grid.RowDefinitions>
+																												<WrapPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top">
+																																<Image 
 																																Source="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Icon}"  
 																																VerticalAlignment="Top" HorizontalAlignment="Left"  
 																																Margin="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(shell:WindowChrome.WindowChrome).ResizeBorderThickness}"   
 																																Width="{Binding Source={x:Static SystemParameters.IconWidth}}"  
 																																shell:WindowChrome.IsHitTestVisibleInChrome="True"/>
-																												<TextBlock 
+																																<TextBlock 
 																																Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title}"   
 																																VerticalAlignment="Top" HorizontalAlignment="Left"   
 																																Margin="36,0,0,0"/>
-																								</WrapPanel>
-																								<WrapPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top">
-																												<Button 
+																												</WrapPanel>
+																												<WrapPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top">
+																																<Button 
 																																x:Name="minimize_btn" 
 																																Content="&#128469;"
-																																shell:WindowChrome.IsHitTestVisibleInChrome="True"
+																																Style="{StaticResource WindowTitleButton}"
 																																Click="minimize_btn_Click"/>
-																												<Button 
+																																<Button 
 																																x:Name="close_btn" 
-																																Content="&#10006;" 
-																																shell:WindowChrome.IsHitTestVisibleInChrome="True"
+																																Content="&#10006;"
+																																Style="{StaticResource WindowTitleButton}"
 																																Click="close_btn_Click"/>
-																								</WrapPanel>
-																								<ContentPresenter Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="{TemplateBinding Content}" />
-																								
-																								
-																				</Grid>
+																												</WrapPanel>
+																												<ContentPresenter Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="{TemplateBinding Content}" />
+																								</Grid>
+																				</Border>
 																</ControlTemplate>
 												</Setter.Value>
 								</Setter>

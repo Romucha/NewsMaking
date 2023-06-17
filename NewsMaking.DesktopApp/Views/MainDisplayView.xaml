@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NewsMaking.DesktopApp.Views"
         mc:Ignorable="d"
+								WindowStartupLocation="CenterScreen"
 								Icon="pack://application:,,,/Images/NewsMakingIcon.ico"
-        Title="News Making Desktop Application" Height="450" Width="800">
+        Title="News Making Desktop Application">
 				<Window.Content>
 								<Grid>
 												<Grid.ColumnDefinitions>
