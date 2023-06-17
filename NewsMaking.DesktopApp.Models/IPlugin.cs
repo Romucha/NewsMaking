@@ -21,6 +21,11 @@
 								public string Description { get; set; }
 
 								/// <summary>
+								/// Plugin descripton.
+								/// </summary>
+								public string Url { get; set; }
+
+								/// <summary>
 								/// Plugin icon.
 								/// </summary>
 								public int Icon { get; set; }

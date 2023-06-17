@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NewsMaking.DesktopApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,9 @@ namespace NewsMaking.DesktopApp.Views
         public PluginContentView()
         {
             InitializeComponent();
+												DataContext = App.Services.GetService(typeof(PluginsViewModel));
         }
+
+								public PluginsViewModel ViewModel => (PluginsViewModel)DataContext;
     }
 }

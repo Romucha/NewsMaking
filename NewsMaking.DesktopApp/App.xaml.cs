@@ -48,7 +48,7 @@ namespace NewsMaking.DesktopApp
 												*/
 												services.AddTransient<IMainActions, MainActions>();
 												services.AddTransient<MainViewModel>();
-												services.AddWpfBlazorWebView();
+												services.AddSingleton<PluginsViewModel>();
 												return services.BuildServiceProvider();
 								}
 				}
