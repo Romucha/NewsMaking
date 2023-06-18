@@ -26,7 +26,6 @@
 								<Setter Property="Height" Value="600"/>
 								<Setter Property="WindowStyle" Value="None"/>
 								<Setter Property="ResizeMode" Value="NoResize"/>
-								<Setter Property="shell:WindowChrome.CornerRadius" Value="{x:Static SystemParameters.WindowCornerRadius}"/>
 								<Setter Property="shell:WindowChrome.WindowChrome">
 												<Setter.Value>
 																<shell:WindowChrome />
@@ -36,8 +35,7 @@
 												<Setter.Value>
 																<ControlTemplate TargetType="{x:Type Window}">
 																				<Border 
-																								Background="{StaticResource BasicWindowColor}"
-																								CornerRadius="{x:Static SystemParameters.WindowCornerRadius}">
+																								Background="{StaticResource BasicWindowColor}">
 																								<Grid>
 																												<Grid.ColumnDefinitions>
 																																<ColumnDefinition Width="auto"/>
