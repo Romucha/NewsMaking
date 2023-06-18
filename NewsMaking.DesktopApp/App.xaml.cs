@@ -8,6 +8,7 @@ using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using NewsMaking.DesktopApp.Models;
 using NewsMaking.DesktopApp.ViewModels;
+using NewsMaking.DesktopApp.ViewModels.ModelImplementations;
 
 namespace NewsMaking.DesktopApp
 {
@@ -49,6 +50,7 @@ namespace NewsMaking.DesktopApp
 												services.AddTransient<IMainActions, MainActions>();
 												services.AddTransient<MainViewModel>();
 												services.AddSingleton<PluginsViewModel>();
+												services.AddTransient<IPluginFactory, PluginFactory>();
 												return services.BuildServiceProvider();
 								}
 				}

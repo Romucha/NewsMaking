@@ -20,6 +20,13 @@
 								<Setter Property="BorderThickness" Value="0"/>
 				</Style>
 
+				<Style x:Key="{x:Type ListView}" TargetType="{x:Type ListView}">
+								<Setter Property="Background" Value="Transparent"/>
+								<Setter Property="HorizontalAlignment" Value="Left"/>
+								<Setter Property="VerticalAlignment" Value="Top"/>
+								<Setter Property="BorderThickness" Value="0"/>
+				</Style>
+
 				<!--main display window-->
 				<Style x:Key="{x:Type local:MainDisplayView}" TargetType="{x:Type local:MainDisplayView}">
 								<Setter Property="Width" Value="800"/>

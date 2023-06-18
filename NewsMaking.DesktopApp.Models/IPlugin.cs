@@ -21,37 +21,23 @@
 								public string Description { get; set; }
 
 								/// <summary>
-								/// Plugin descripton.
-								/// </summary>
-								public string Url { get; set; }
-
-								/// <summary>
 								/// Plugin icon.
 								/// </summary>
 								public int Icon { get; set; }
 
 								/// <summary>
-								/// Initializes plugin data.
+								/// Address of the main page of the plugin.
 								/// </summary>
-								/// <returns></returns>
-								public Task InitializeAsync();
+								public Uri IndexPageAddress { get; set; }
 
 								/// <summary>
-								/// Terminates plugin data.
+								/// Address of the settings page of the plugin.
 								/// </summary>
-								/// <returns></returns>
-								public Task TerminateAsync();
+								public Uri SettingsPageAddress { get; set; }
 
 								/// <summary>
-								/// Updates plugin data.
+								/// Address of the help page of the plugin.
 								/// </summary>
-								/// <returns></returns>
-								public Task UpdateAsync();
-
-								/// <summary>
-								/// Calls for help web page.
-								/// </summary>
-								/// <returns></returns>
-								public Task HelpAsync();
+								public Uri HelpPageAddress { get; set; }
 				}
 }

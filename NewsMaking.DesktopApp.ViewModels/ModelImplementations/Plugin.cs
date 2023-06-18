@@ -13,26 +13,8 @@ namespace NewsMaking.DesktopApp.ViewModels.ModelImplementations
 								public string DisplayName { get; set; }
 								public string Description { get; set; }
 								public int Icon { get; set; }
-								public string Url { get; set; }
-
-								public Task HelpAsync()
-								{
-												throw new NotImplementedException();
-								}
-
-								public Task InitializeAsync()
-								{
-												throw new NotImplementedException();
-								}
-
-								public Task TerminateAsync()
-								{
-												throw new NotImplementedException();
-								}
-
-								public Task UpdateAsync()
-								{
-												throw new NotImplementedException();
-								}
+								public Uri IndexPageAddress { get; set; }
+								public Uri SettingsPageAddress { get; set; }
+								public Uri HelpPageAddress { get; set; }
 				}
 }

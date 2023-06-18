@@ -9,7 +9,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 				<Border>
-								<wv2:WebView2 Source="{Binding CurrentPlugin.Url}">
+								<wv2:WebView2 Source="{Binding CurrentPlugin.IndexPageAddress}">
 								</wv2:WebView2>
 				</Border>
 </UserControl>

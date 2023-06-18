@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.Extensions.Logging;
 using NewsMaking.DesktopApp.Models;
+using NewsMaking.DesktopApp.ViewModels.ModelImplementations;
 using System.Collections.ObjectModel;
 
 namespace NewsMaking.DesktopApp.ViewModels
@@ -44,17 +45,17 @@ namespace NewsMaking.DesktopApp.ViewModels
 												Plugins.Add(new Plugin()
 												{
 																DisplayName = "google",
-																Url = "https://google.com"
+																IndexPageAddress = new Uri("https://google.com")
 												});
 												Plugins.Add(new Plugin()
 												{
 																DisplayName = "yandex",
-																Url = "https://ya.ru"
+																IndexPageAddress = new Uri("https://ya.ru")
 												});
 												Plugins.Add(new Plugin()
 												{
 																DisplayName = "stackoverflow",
-																Url = "https://stackoverflow.com"
+																IndexPageAddress = new Uri("https://stackoverflow.com")
 												});
 								}
     }
