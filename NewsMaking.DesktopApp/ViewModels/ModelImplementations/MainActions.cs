@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace NewsMaking.DesktopApp
+namespace NewsMaking.DesktopApp.ViewModels.ModelImplementations
 {
 				public class MainActions : IMainActions
 				{

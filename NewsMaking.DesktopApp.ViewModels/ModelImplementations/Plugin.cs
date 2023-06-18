@@ -1,10 +1,11 @@
-﻿using System;
+﻿using NewsMaking.DesktopApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewsMaking.DesktopApp.Models
+namespace NewsMaking.DesktopApp.ViewModels.ModelImplementations
 {
 				public class Plugin : IPlugin
 				{
