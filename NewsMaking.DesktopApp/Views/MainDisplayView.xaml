@@ -14,8 +14,15 @@
 																<ColumnDefinition Width="auto"/>
 																<ColumnDefinition Width="*"/>
 												</Grid.ColumnDefinitions>
+												<Grid.RowDefinitions>
+																<RowDefinition Height="*"/>
+																<RowDefinition Height="auto"/>
+																<RowDefinition Height="auto"/>
+												</Grid.RowDefinitions>
+												<!--Plugin list and settings-->
 												<local:PluginListView Grid.Row="0" Grid.Column="0"/>
-												<local:PluginContentView Grid.Row="0" Grid.Column="1"/>
+												<!--Plugin content-->
+												<local:PluginContentView Grid.Row="0" Grid.Column="1" Grid.RowSpan="4"/>
 								</Grid>
 				</Window.Content>
     
