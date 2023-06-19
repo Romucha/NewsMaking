@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.Input;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -11,14 +12,18 @@ namespace NewsMaking.DesktopApp.Models
 				{
 								string PluginDirectory { get; }
 
-								void GetPlugins();
-
 								ObservableCollection<IPlugin> Plugins { get; }
 
-								IPlugin CurrentPlugin { get; }
+								IPlugin CurrentPlugin { get; set; }
 
-								void TurnOn(IPlugin plugin);
+								IAsyncRelayCommand UpdateCommand { get; set; }
 
-								void TurnOff(IPlugin plugin);
+								IAsyncRelayCommand CallHelpCommand { get; set; }
+
+								IAsyncRelayCommand<IPlugin> TurnOnCommand { get; set; }
+
+								IAsyncRelayCommand<IPlugin> TurnOffCommand { get; set; }
+
+								IAsyncRelayCommand GetPluginsCommand { get; set; }
 				}
 }
