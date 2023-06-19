@@ -9,12 +9,12 @@ using System.Windows;
 
 namespace NewsMaking.DesktopApp.ViewModels.ModelImplementations
 {
-				public class MainActions : IMainActions
-				{
-								public Action OpenMainDisplayView => () => { new MainDisplayView().Show(); };
+    public class MainActions : IMainActions
+    {
+        public Action OpenMainDisplayView => () => { new MainDisplayView().Show(); };
 
-								public Action OpenExpressPanelView => () => { new ExpressPanelView().Show(); };
+        public Action OpenExpressPanelView => () => { new ExpressPanelView().Show(); };
 
-								public Action ApplicationShutdown => () => { Application.Current.Shutdown(); };
-				}
+        public Action ApplicationShutdown => () => { Application.Current.Shutdown(); };
+    }
 }

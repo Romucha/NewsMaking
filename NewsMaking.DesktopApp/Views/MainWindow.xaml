@@ -15,19 +15,19 @@
 								Height="450" Width="800"
 								x:Name="NewsMainWindow">
     <Grid>
-								<tb:TaskbarIcon 
+        <tb:TaskbarIcon 
 												x:Name="DesktopTrayIcon"
             Visibility="Visible"
             ToolTipText="News Making Desktop App"
             IconSource="pack://application:,,,/Images/NewsMakingIcon.ico"
             PopupActivation="DoubleClick"
 												LeftClickCommand="{Binding OpenExpressPanelViewCommand}">
-												<tb:TaskbarIcon.ContextMenu>
-																<ContextMenu>
-																				<MenuItem x:Name="OpenAppMenuItem" Header="Open app" Command="{Binding OpenMainDisplayViewCommand}" />
-																				<MenuItem x:Name="ExitMenuItem" Header="Exit" Command="{Binding ApplicationShutdownCommand}"/>
-																</ContextMenu>
-												</tb:TaskbarIcon.ContextMenu>
-								</tb:TaskbarIcon>
-				</Grid>
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu>
+                    <MenuItem x:Name="OpenAppMenuItem" Header="Open app" Command="{Binding OpenMainDisplayViewCommand}" />
+                    <MenuItem x:Name="ExitMenuItem" Header="Exit" Command="{Binding ApplicationShutdownCommand}"/>
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
+        </tb:TaskbarIcon>
+    </Grid>
 </Window>

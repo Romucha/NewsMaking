@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace NewsMaking.DesktopApp.Models
 {
-				public interface IPluginFactory
-				{
-								IPlugin GetPlugin(Uri PluginPage);
-				}
+    public interface IPluginFactory
+    {
+        IPlugin GetPlugin(Uri PluginPage);
+    }
 }

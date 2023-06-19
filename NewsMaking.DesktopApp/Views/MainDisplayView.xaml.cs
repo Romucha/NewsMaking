@@ -18,15 +18,15 @@ using System.Windows.Shapes;
 namespace NewsMaking.DesktopApp.Views
 {
 
-				/// <summary>
-				/// Логика взаимодействия для MainDisplayView.xaml
-				/// </summary>
-				public partial class MainDisplayView : Window
+    /// <summary>
+    /// Логика взаимодействия для MainDisplayView.xaml
+    /// </summary>
+    public partial class MainDisplayView : Window
     {
         public MainDisplayView()
         {
             InitializeComponent();
-												WindowSettings.SetWindowCornerRound(this);
-								}
+            WindowSettings.SetWindowCornerRound(this);
+        }
     }
 }

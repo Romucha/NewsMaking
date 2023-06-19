@@ -17,17 +17,17 @@ using System.Windows.Shapes;
 
 namespace NewsMaking.DesktopApp.Views
 {
-				/// <summary>
-				/// Interaction logic for MainWindow.xaml
-				/// </summary>
-				public partial class MainWindow : Window
-				{
-								public MainWindow()
-								{
-												InitializeComponent();
-												DataContext = App.Services.GetService(typeof(MainViewModel));
-								}
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+            DataContext = App.Services.GetService(typeof(MainViewModel));
+        }
 
-								private MainViewModel ViewModel => (MainViewModel)DataContext;
-				}
+        private MainViewModel ViewModel => (MainViewModel)DataContext;
+    }
 }

@@ -24,9 +24,9 @@ namespace NewsMaking.DesktopApp.Views
         public PluginContentView()
         {
             InitializeComponent();
-												DataContext = App.Services.GetService(typeof(PluginsViewModel));
+            DataContext = App.Services.GetService(typeof(PluginsViewModel));
         }
 
-								public PluginsViewModel ViewModel => (PluginsViewModel)DataContext;
+        public PluginsViewModel ViewModel => (PluginsViewModel)DataContext;
     }
 }

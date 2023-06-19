@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace NewsMaking.DesktopApp.Models
 {
-				public interface IMainActions
-				{
-								Action OpenMainDisplayView { get; }
+    public interface IMainActions
+    {
+        Action OpenMainDisplayView { get; }
 
-								Action OpenExpressPanelView { get; }
+        Action OpenExpressPanelView { get; }
 
-								Action ApplicationShutdown { get; }
-				}
+        Action ApplicationShutdown { get; }
+    }
 }

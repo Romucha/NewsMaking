@@ -14,14 +14,14 @@ using System.Windows.Shapes;
 
 namespace NewsMaking.DesktopApp.Views
 {
-				/// <summary>
-				/// Логика взаимодействия для ExpressPanelView.xaml
-				/// </summary>
-				public partial class ExpressPanelView : Window
-				{
-								public ExpressPanelView()
-								{
-												InitializeComponent();
-								}
-				}
+    /// <summary>
+    /// Логика взаимодействия для ExpressPanelView.xaml
+    /// </summary>
+    public partial class ExpressPanelView : Window
+    {
+        public ExpressPanelView()
+        {
+            InitializeComponent();
+        }
+    }
 }

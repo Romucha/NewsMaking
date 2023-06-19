@@ -8,14 +8,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-								<ListView ItemsSource="{Binding Plugins}" SelectedItem="{Binding CurrentPlugin, Mode=OneWayToSource}">
-												<ListView.ItemTemplate>
-																<DataTemplate DataType="{x:Type plgn:IPlugin}">
-																				<Border>
-																								<TextBlock Text="{Binding DisplayName}"/>
-																				</Border>
-																</DataTemplate>
-												</ListView.ItemTemplate>
-								</ListView>
-				</Grid>
+        <ListView ItemsSource="{Binding Plugins}" SelectedItem="{Binding CurrentPlugin, Mode=OneWayToSource}">
+            <ListView.ItemTemplate>
+                <DataTemplate DataType="{x:Type plgn:IPlugin}">
+                    <Border>
+                        <TextBlock Text="{Binding DisplayName}"/>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
 </UserControl>

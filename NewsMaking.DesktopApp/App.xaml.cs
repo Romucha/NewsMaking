@@ -12,46 +12,46 @@ using NewsMaking.DesktopApp.ViewModels.ModelImplementations;
 
 namespace NewsMaking.DesktopApp
 {
-				/// <summary>
-				/// Interaction logic for App.xaml
-				/// </summary>
-				public partial class App : Application
-				{
-								public App()
-								{
-												Services = ConfigureServices();
+    /// <summary>
+    /// Interaction logic for App.xaml
+    /// </summary>
+    public partial class App : Application
+    {
+        public App()
+        {
+            Services = ConfigureServices();
 
-												this.InitializeComponent();
-								}
+            this.InitializeComponent();
+        }
 
-								/// <summary>
-								/// Gets the current <see cref="App"/> instance in use.
-								/// </summary>
-								public new static App Current => (App)Application.Current;
+        /// <summary>
+        /// Gets the current <see cref="App"/> instance in use.
+        /// </summary>
+        public new static App Current => (App)Application.Current;
 
-								/// <summary>
-								/// Gets the <see cref="IServiceProvider"/> instance to resolve application services.
-								/// </summary>
-								public static IServiceProvider Services { get; private set; }
+        /// <summary>
+        /// Gets the <see cref="IServiceProvider"/> instance to resolve application services.
+        /// </summary>
+        public static IServiceProvider Services { get; private set; }
 
-								/// <summary>
-								/// Configures the services for the application.
-								/// </summary>
-								private static IServiceProvider ConfigureServices()
-								{
-												IServiceCollection services = new ServiceCollection();
-												/*
+        /// <summary>
+        /// Configures the services for the application.
+        /// </summary>
+        private static IServiceProvider ConfigureServices()
+        {
+            IServiceCollection services = new ServiceCollection();
+            /*
 												services.AddSingleton<IFilesService, FilesService>();
 												services.AddSingleton<ISettingsService, SettingsService>();
 												services.AddSingleton<IClipboardService, ClipboardService>();
 												services.AddSingleton<IShareService, ShareService>();
 												services.AddSingleton<IEmailService, EmailService>();
 												*/
-												services.AddTransient<IMainActions, MainActions>();
-												services.AddTransient<MainViewModel>();
-												services.AddSingleton<PluginsViewModel>();
-												services.AddTransient<IPluginFactory, PluginFactory>();
-												return services.BuildServiceProvider();
-								}
-				}
+            services.AddTransient<IMainActions, MainActions>();
+            services.AddTransient<MainViewModel>();
+            services.AddSingleton<PluginsViewModel>();
+            services.AddTransient<IPluginFactory, PluginFactory>();
+            return services.BuildServiceProvider();
+        }
+    }
 }
