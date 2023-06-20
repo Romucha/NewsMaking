@@ -28,16 +28,16 @@
         /// <summary>
         /// Address of the main page of the plugin.
         /// </summary>
-        public Uri IndexPageAddress { get; set; }
+        public string IndexPageAddress { get; set; }
 
         /// <summary>
         /// Address of the settings page of the plugin.
         /// </summary>
-        public Uri SettingsPageAddress { get; set; }
+        public string SettingsPageAddress { get; set; }
 
         /// <summary>
         /// Address of the help page of the plugin.
         /// </summary>
-        public Uri HelpPageAddress { get; set; }
+        public string HelpPageAddress { get; set; }
     }
 }

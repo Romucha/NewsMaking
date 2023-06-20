@@ -8,6 +8,6 @@ namespace NewsMaking.DesktopApp.Models
 {
     public interface IPluginFactory
     {
-        IPlugin GetPlugin(Uri PluginPage);
+        Task<IPlugin> GetPlugin(string PluginAddress);
     }
 }

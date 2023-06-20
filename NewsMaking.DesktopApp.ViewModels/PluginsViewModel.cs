@@ -9,6 +9,8 @@ namespace NewsMaking.DesktopApp.ViewModels
 {
     public class PluginsViewModel : ObservableObject, IPluginsManager
     {
+        private readonly IPluginFactory _pluginFactory;
+
         private ObservableCollection<IPlugin> plugins;
 
         public ObservableCollection<IPlugin> Plugins
@@ -33,7 +35,7 @@ namespace NewsMaking.DesktopApp.ViewModels
         public IAsyncRelayCommand<IPlugin> TurnOffCommand { get; set; }
         public IAsyncRelayCommand GetPluginsCommand { get; set; }
 
-        public PluginsViewModel()
+        public PluginsViewModel(IPluginFactory pluginFactory)
         {
             plugins = new ObservableCollection<IPlugin>();
             UpdateCommand = new AsyncRelayCommand(_update);
@@ -41,6 +43,7 @@ namespace NewsMaking.DesktopApp.ViewModels
             TurnOnCommand = new AsyncRelayCommand<IPlugin>(_turnOn);
             TurnOffCommand = new AsyncRelayCommand<IPlugin>(_turnOff);
             GetPluginsCommand = new AsyncRelayCommand(_getPlugins);
+            _pluginFactory = pluginFactory;
         }
 
         private async Task _update()
@@ -65,23 +68,23 @@ namespace NewsMaking.DesktopApp.ViewModels
 
         private async Task _getPlugins()
         {
-            Plugins.Add(new Plugin()
-            {
-                DisplayName = "google",
-                IndexPageAddress = new Uri("https://google.com")
-            });
-            Plugins.Add(new Plugin()
-            {
-                DisplayName = "yandex",
-                IndexPageAddress = new Uri("https://ya.ru")
-            });
-            Plugins.Add(new Plugin()
-            {
-                DisplayName = "stackoverflow",
-                IndexPageAddress = new Uri("https://stackoverflow.com")
-            });
-
-            await Task.CompletedTask;
+            //Plugins.Add(new Plugin()
+            //{
+            //    DisplayName = "google",
+            //    IndexPageAddress = new Uri("https://google.com")
+            //});
+            //Plugins.Add(new Plugin()
+            //{
+            //    DisplayName = "yandex",
+            //    IndexPageAddress = new Uri("https://ya.ru")
+            //});
+            //Plugins.Add(new Plugin()
+            //{
+            //    DisplayName = "stackoverflow",
+            //    IndexPageAddress = new Uri("https://stackoverflow.com")
+            //});
+            var plugin = await _pluginFactory.GetPlugin(@"C:\Users\roman\source\repos\NewsMaking\NewsMaking.Receiver\bin\Release\net6.0\browser-wasm\publish\wwwroot\index.html");
+            Plugins.Add(plugin);
         }
     }
 }

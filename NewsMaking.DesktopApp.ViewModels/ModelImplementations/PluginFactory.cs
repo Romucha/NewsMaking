@@ -17,11 +17,16 @@ namespace NewsMaking.DesktopApp.ViewModels.ModelImplementations
             
         }
 
-        public IPlugin GetPlugin(Uri PluginPage)
+        public async Task<IPlugin> GetPlugin(string PluginAddress)
         {
             HtmlDocument document = new HtmlDocument();
-            document.Load(PluginPage.AbsolutePath);
-            return null;
+            document.Load(PluginAddress);
+            var meta = document.DocumentNode.SelectSingleNode("html").SelectSingleNode("head").SelectNodes("meta");
+            return new Plugin()
+            {
+                IndexPageAddress = PluginAddress,
+                DisplayName = "Test plugin"
+            };
         }
 
         private void _parseHtmlPage(HtmlDocument dcoument)

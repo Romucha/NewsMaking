@@ -13,8 +13,8 @@ namespace NewsMaking.DesktopApp.ViewModels.ModelImplementations
         public string DisplayName { get; set; }
         public string Description { get; set; }
         public int Icon { get; set; }
-        public Uri IndexPageAddress { get; set; }
-        public Uri SettingsPageAddress { get; set; }
-        public Uri HelpPageAddress { get; set; }
+        public string IndexPageAddress { get; set; }
+        public string SettingsPageAddress { get; set; }
+        public string HelpPageAddress { get; set; }
     }
 }
