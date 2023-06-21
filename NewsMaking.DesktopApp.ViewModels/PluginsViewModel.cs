@@ -24,7 +24,11 @@ namespace NewsMaking.DesktopApp.ViewModels
         public IPlugin CurrentPlugin
         {
             get => currentPlugin;
-            set => SetProperty(ref currentPlugin, value);
+            set
+            {
+                if (value != null)
+                    SetProperty(ref currentPlugin, value);
+            }
         }
 
         public string PluginDirectory { get; }
@@ -68,6 +72,7 @@ namespace NewsMaking.DesktopApp.ViewModels
 
         private async Task _getPlugins()
         {
+            Plugins = new();
             //Plugins.Add(new Plugin()
             //{
             //    DisplayName = "google",

@@ -14,7 +14,7 @@
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Grid>
-        <ListView ItemsSource="{Binding Plugins}" SelectedItem="{Binding CurrentPlugin, Mode=OneWayToSource}">
+        <ListView ItemsSource="{Binding Plugins}" SelectedItem="{Binding CurrentPlugin, Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate DataType="{x:Type plgn:IPlugin}">
                     <Border>
