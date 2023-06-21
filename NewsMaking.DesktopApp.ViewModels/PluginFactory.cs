@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewsMaking.DesktopApp.ViewModels.ModelImplementations
+namespace NewsMaking.DesktopApp.ViewModels
 {
     public class PluginFactory : IPluginFactory
     {

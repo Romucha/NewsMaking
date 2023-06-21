@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewsMaking.DesktopApp.ViewModels.ModelImplementations
+namespace NewsMaking.DesktopApp.Models
 {
     public class Plugin : IPlugin
     {
