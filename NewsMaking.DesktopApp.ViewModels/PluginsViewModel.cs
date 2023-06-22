@@ -2,7 +2,6 @@
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Extensions.Logging;
 using NewsMaking.DesktopApp.Models;
-using NewsMaking.DesktopApp.ViewModels.ModelImplementations;
 using System.Collections.ObjectModel;
 
 namespace NewsMaking.DesktopApp.ViewModels

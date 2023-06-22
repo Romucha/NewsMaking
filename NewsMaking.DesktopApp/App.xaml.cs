@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NewsMaking.DesktopApp.Models;
 using NewsMaking.DesktopApp.ViewModels;
 using NewsMaking.DesktopApp.ViewModels.ModelImplementations;
+using NLog.Extensions.Logging;
 
 namespace NewsMaking.DesktopApp
 {
@@ -47,6 +48,7 @@ namespace NewsMaking.DesktopApp
 												services.AddSingleton<IShareService, ShareService>();
 												services.AddSingleton<IEmailService, EmailService>();
 												*/
+            services.AddLogging(c => c.AddNLog());
             services.AddTransient<IMainActions, MainActions>();
             services.AddTransient<MainViewModel>();
             services.AddSingleton<PluginsViewModel>();
