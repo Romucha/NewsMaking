@@ -1,4 +1,5 @@
-﻿using NewsMaking.DesktopApp.ViewModels;
+﻿using Microsoft.Web.WebView2.Core;
+using NewsMaking.DesktopApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,8 +26,16 @@ namespace NewsMaking.DesktopApp.Views
         {
             InitializeComponent();
             DataContext = App.Services.GetService(typeof(PluginsViewModel));
+            InitializeAsync();
         }
 
         public PluginsViewModel ViewModel => (PluginsViewModel)DataContext;
+
+        async void InitializeAsync()
+        {
+            var op = new CoreWebView2EnvironmentOptions("--disable-web-security");
+            var env = await CoreWebView2Environment.CreateAsync(null, null, op);
+            await webView.EnsureCoreWebView2Async(env);
+        }
     }
 }
