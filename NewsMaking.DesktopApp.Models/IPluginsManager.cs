@@ -10,8 +10,6 @@ namespace NewsMaking.DesktopApp.Models
 {
     public interface IPluginsManager
     {
-        string PluginDirectory { get; }
-
         ObservableCollection<IPlugin> Plugins { get; }
 
         IPlugin CurrentPlugin { get; set; }

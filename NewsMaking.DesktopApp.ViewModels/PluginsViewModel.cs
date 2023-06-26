@@ -9,6 +9,8 @@ namespace NewsMaking.DesktopApp.ViewModels
     public class PluginsViewModel : ObservableObject, IPluginsManager
     {
         private readonly IPluginFactory _pluginFactory;
+        private readonly ILogger<PluginsViewModel> _logger;
+        private readonly IPluginManagerSettings _pluginsManagerSettings;
 
         private ObservableCollection<IPlugin> plugins;
 
@@ -30,15 +32,13 @@ namespace NewsMaking.DesktopApp.ViewModels
             }
         }
 
-        public string PluginDirectory { get; }
-
         public IAsyncRelayCommand UpdateCommand { get; set; }
         public IAsyncRelayCommand CallHelpCommand { get; set; }
         public IAsyncRelayCommand<IPlugin> TurnOnCommand { get; set; }
         public IAsyncRelayCommand<IPlugin> TurnOffCommand { get; set; }
         public IAsyncRelayCommand GetPluginsCommand { get; set; }
 
-        public PluginsViewModel(IPluginFactory pluginFactory)
+        public PluginsViewModel(IPluginFactory pluginFactory, IPluginManagerSettings settings, ILogger<PluginsViewModel> logger)
         {
             plugins = new ObservableCollection<IPlugin>();
             UpdateCommand = new AsyncRelayCommand(_update);
@@ -47,6 +47,8 @@ namespace NewsMaking.DesktopApp.ViewModels
             TurnOffCommand = new AsyncRelayCommand<IPlugin>(_turnOff);
             GetPluginsCommand = new AsyncRelayCommand(_getPlugins);
             _pluginFactory = pluginFactory;
+            _logger = logger;
+            _pluginsManagerSettings = settings;
         }
 
         private async Task _update()
@@ -87,8 +89,10 @@ namespace NewsMaking.DesktopApp.ViewModels
             //    DisplayName = "stackoverflow",
             //    IndexPageAddress = new Uri("https://stackoverflow.com")
             //});
-            var plugin = await _pluginFactory.GetPlugin(@"C:\Users\roman\source\repos\NewsMaking\NewsMaking.Receiver\bin\Release\net6.0\browser-wasm\publish\wwwroot\index.html");
-            Plugins.Add(plugin);
+            foreach (var pluginPath in _pluginsManagerSettings.GetPlugins())
+            {
+                Plugins.Add(await _pluginFactory.GetPlugin(pluginPath));
+            }
         }
     }
 }

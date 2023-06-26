@@ -51,6 +51,7 @@ namespace NewsMaking.DesktopApp
             services.AddLogging(c => c.AddNLog());
             services.AddTransient<IMainActions, MainActions>();
             services.AddTransient<MainViewModel>();
+            services.AddTransient<IPluginManagerSettings, PluginManagerSettings>();
             services.AddSingleton<PluginsViewModel>();
             services.AddTransient<IPluginFactory, PluginFactory>();
             return services.BuildServiceProvider();
