@@ -23,7 +23,7 @@ namespace NewsMaking.DesktopApp.Models
         public IEnumerable<string> GetPlugins()
         {
             DirectoryInfo pluginDir = new DirectoryInfo(PluginDirectoryPath);
-            foreach (FileInfo fileInfo in pluginDir.GetFiles(PluginMainFileName))
+            foreach (FileInfo fileInfo in pluginDir.GetFiles(PluginMainFileName, SearchOption.AllDirectories))
             {
                 yield return fileInfo.FullName;
             }
