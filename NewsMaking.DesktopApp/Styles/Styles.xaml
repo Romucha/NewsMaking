@@ -6,6 +6,7 @@
     <!--colors-->
     <SolidColorBrush x:Key="BasicWindowColor" Color="WhiteSmoke"/>
     <SolidColorBrush x:Key="TitleWindowButtonColor" Color="WhiteSmoke"/>
+    <SolidColorBrush x:Key="TitleWindowCloseButtonColor" Color="Crimson" Opacity="0.9"/>
     <SolidColorBrush x:Key="PluginListColor" Color="AliceBlue"/>
 
     <!--title button-->
@@ -19,6 +20,10 @@
         <Setter Property="Margin" Value="0"/>
         <Setter Property="Padding" Value="10"/>
         <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+
+    <Style x:Key="WindowTitleCloseButton" TargetType="{x:Type Button}" BasedOn="{StaticResource WindowTitleButton}">
+        <Setter Property="Background" Value="{StaticResource TitleWindowCloseButtonColor}"/>
     </Style>
 
     <Style x:Key="{x:Type ListView}" TargetType="{x:Type ListView}">
@@ -35,7 +40,6 @@
         <Setter Property="Width" Value="800"/>
         <Setter Property="Height" Value="600"/>
         <Setter Property="WindowStyle" Value="None"/>
-        <Setter Property="ResizeMode" Value="NoResize"/>
         <Setter Property="shell:WindowChrome.WindowChrome">
             <Setter.Value>
                 <shell:WindowChrome />
@@ -45,7 +49,8 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Window}">
                     <Border 
-																								Background="{StaticResource BasicWindowColor}">
+																								Background="{StaticResource BasicWindowColor}"
+                        Margin="5">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="auto"/>
@@ -74,9 +79,15 @@
 																																Style="{StaticResource WindowTitleButton}"
 																																Click="minimize_btn_Click"/>
                                 <Button 
+																																x:Name="maximize_btn"
+                                Style="{StaticResource WindowTitleButton}"
+                                Content="&#128470;"
+																																Click="maximize_btn_Click">
+                                </Button>
+                                <Button 
 																																x:Name="close_btn" 
 																																Content="&#10006;"
-																																Style="{StaticResource WindowTitleButton}"
+																																Style="{StaticResource WindowTitleCloseButton}"
 																																Click="close_btn_Click"/>
                             </WrapPanel>
                             <ContentPresenter Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="{TemplateBinding Content}" />
