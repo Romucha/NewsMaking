@@ -1,8 +1,18 @@
 ﻿@page "/news"
 @page "/"
+@page "/index"
 
-<h3>News</h3>
-
-@code {
-
+@if (_news == null)
+{
+    <div>Loading...</div>
+}
+else
+{
+ @foreach (var news in _news)
+ {
+  <h4>@news.Title</h4>
+  <div>@news.Body</div>
+  <a href="@news.Link">More...</a>
+  <div class="bg-secondary">@news.CreationTime</div>
+ }
 }
