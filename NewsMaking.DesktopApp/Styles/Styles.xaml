@@ -37,10 +37,10 @@
 
     <!--main display window-->
     <Style x:Key="{x:Type local:MainDisplayView}" TargetType="{x:Type local:MainDisplayView}">
-        <Setter Property="Width" Value="800"/>
-        <Setter Property="Height" Value="600"/>
+        <Setter Property="Width" Value="1200"/>
+        <Setter Property="Height" Value="900"/>
         <Setter Property="WindowStyle" Value="None"/>
-        <Setter Property="ResizeMode" Value="CanResize"/>
+        <Setter Property="ResizeMode" Value="NoResize"/>
         <Setter Property="shell:WindowChrome.WindowChrome">
             <Setter.Value>
                 <shell:WindowChrome>
@@ -51,21 +51,6 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Window}">
                     <Border Background="{StaticResource BasicWindowColor}">
-                        <Border.Style>
-                            <Style TargetType="{x:Type Border}">
-                                <Style.Triggers>
-                                    <!-- Add to avoid border disappearing when window is maximised -->
-                                    <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType=Window}}" 
-                                 Value="{x:Static WindowState.Maximized}">
-                                        <Setter Property="Margin" Value="10"/>
-                                    </DataTrigger>
-                                    <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType=Window}}" 
-                                 Value="{x:Static WindowState.Normal}">
-                                        <Setter Property="Margin" Value="0"/>
-                                    </DataTrigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Border.Style>
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="auto"/>
@@ -79,7 +64,7 @@
                                 <Image 
 																																    Source="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Icon}"  
 																																    VerticalAlignment="Top" HorizontalAlignment="Left"  
-																																    Margin="3"   
+																																    Margin="2"   
 																																    Width="{Binding Source={x:Static SystemParameters.IconWidth}}"  
 																																    shell:WindowChrome.IsHitTestVisibleInChrome="True"/>
                                 <TextBlock 
@@ -93,23 +78,6 @@
 																																Content="&#128469;"
 																																Style="{StaticResource WindowTitleButton}"
 																																Click="minimize_btn_Click"/>
-                                <Button 
-																																x:Name="maximize_btn"
-                                Content="&#128470;"
-																																Click="maximize_btn_Click">
-                                    <Button.Style>
-                                        <Style TargetType="{x:Type Button}" BasedOn="{StaticResource WindowTitleButton}">
-                                            <Style.Triggers>
-                                                <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType=Window}}" Value="Maximized">
-                                                    <Setter Property="Content" Value="&#10064;"/>
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType=Window}}" Value="Normal">
-                                                    <Setter Property="Content" Value="&#128470;"/>
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </Button.Style>
-                                </Button>
                                 <Button 
 																																x:Name="close_btn" 
 																																Content="&#10006;"

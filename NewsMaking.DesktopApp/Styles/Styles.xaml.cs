@@ -21,20 +21,5 @@ namespace NewsMaking.DesktopApp.Styles
             Button btn = sender as Button;
             (btn.TemplatedParent as Window).Close();
         }
-
-        private void maximize_btn_Click(object sender, RoutedEventArgs e)
-        {
-             Button btn = sender as Button;
-             if ((btn.TemplatedParent as Window).WindowState == WindowState.Maximized) 
-             { 
-                 (btn.TemplatedParent as Window).WindowState = WindowState.Normal;
-                 btn.Content = "🗖";
-             }
-             else if ((btn.TemplatedParent as Window).WindowState == WindowState.Normal)
-             {
-                 (btn.TemplatedParent as Window).WindowState = WindowState.Maximized;
-                 btn.Content = "❐";
-             }
-        }
     }
 }
