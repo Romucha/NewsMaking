@@ -4,7 +4,7 @@
  {
    public string Title { get; set; }
 
-   public string CreationTime { get; set; }
+   public DateTime CreationTime { get; set; }
 
    public string ContentType { get; set; }
 

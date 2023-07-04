@@ -13,6 +13,6 @@ else
   <h4>@news.Title</h4>
   <div>@news.Body</div>
   <a href="@news.Link">More...</a>
-  <div class="bg-secondary">@news.CreationTime</div>
+  <div class="bg-secondary">@news.CreationTime.ToString("dd.MM.yyyy hh:mm")</div>
  }
 }
