@@ -1,7 +1,17 @@
 ﻿@page "/personalnews"
-
-<h3>PersonalNews</h3>
-
-@code {
-
+<div class="text-black">Try your luck with guid:</div>
+<input @bind="_input" @oninput="onIdChanged" />
+@if (_personalnews == null)
+{
+ <div>Nothing here for this id...</div>
+}
+else
+{
+ @foreach (var news in _personalnews)
+ {
+  <h4>@news.Title</h4>
+  <div>@news.Body</div>
+  <a href="@news.Link">More...</a>
+  <div class="bg-secondary">@news.CreationTime.ToString("dd.MM.yyyy hh:mm")</div>
+ }
 }

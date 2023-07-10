@@ -8,6 +8,6 @@ namespace NewsMaking.AsconNews.Services
 
   Task<AnnounceModel> GetAnnounce();
 
-  Task<PersonalNewsModel> GetPersonalNews();
+  Task<IEnumerable<NewsModel>> GetPersonalNews(Guid UserID);
  }
 }
