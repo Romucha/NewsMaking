@@ -23,10 +23,16 @@ namespace NewsMaking.DesktopApp.Misc
 
         public static void SetWindowCornerRound(Window window)
         {
-            IntPtr hWnd = new WindowInteropHelper(window).EnsureHandle();
-            var attribute = DWMWINDOWATTRIBUTE.DWMWA_WINDOW_CORNER_PREFERENCE;
-            var preference = _isWindows11OrGreater() ? DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_ROUND : DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_DONOTROUND;
-            DwmSetWindowAttribute(hWnd, attribute, ref preference, sizeof(uint));
+            // It causes an error on Windows 10 or less, so it needs to be inside try/catch block
+            // For now there's no logging in here, so if anything breaks we won't know it
+            try
+            {
+                IntPtr hWnd = new WindowInteropHelper(window).EnsureHandle();
+                var attribute = DWMWINDOWATTRIBUTE.DWMWA_WINDOW_CORNER_PREFERENCE;
+                var preference = _isWindows11OrGreater() ? DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_ROUND : DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_DONOTROUND;
+                DwmSetWindowAttribute(hWnd, attribute, ref preference, sizeof(uint));
+            }
+            catch { }
         }
     }
 }
