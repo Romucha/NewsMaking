@@ -1,8 +1,15 @@
 ﻿@page "/news"
 @page "/"
+@page "/index"
 
-<h3>News</h3>
-
-@code {
-
+@if (_news == null)
+{
+    <div>Loading...</div>
+}
+else
+{
+ @foreach (var news in _news)
+ {
+  <NewsMaking.AsconNews.Components.NewsComponent news="news"/>
+ }
 }
