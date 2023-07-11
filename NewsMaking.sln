@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsMaking.DesktopApp.ViewM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsMaking.Receiver", "NewsMaking.Receiver\NewsMaking.Receiver.csproj", "{A6311382-DA6D-40C2-89C0-DA6DD1E27791}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsMaking.AsconNews", "NewsMaking.AsconNews\NewsMaking.AsconNews.csproj", "{C555B2C5-DE5F-4E65-8BB9-0DC1FE1912E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsMaking.AsconNews", "NewsMaking.AsconNews\NewsMaking.AsconNews.csproj", "{C555B2C5-DE5F-4E65-8BB9-0DC1FE1912E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
