@@ -5,7 +5,7 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>disable</Nullable>
     <UseWPF>true</UseWPF>
-    <AssemblyVersion>1.0.*</AssemblyVersion>
+    <AssemblyVersion>1.1.*</AssemblyVersion>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <SignAssembly>True</SignAssembly>
   </PropertyGroup>
