@@ -1,6 +1,6 @@
 ﻿@page "/personalnews"
 <div class="text-black">Try your luck with guid:</div>
-<input @bind="_input" @oninput="onIdChanged" />
+<input value="@_input" @onchange="onChange" @onkeyup="onKeyUp" />
 @if (_personalnews == null)
 {
  <div>Nothing here for this id...</div>

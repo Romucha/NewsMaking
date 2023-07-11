@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 using NewsMaking.AsconNews.Models;
 using NewsMaking.AsconNews.Services;
 
@@ -15,12 +16,20 @@ namespace NewsMaking.AsconNews.Pages
 
   private string _input = "";
 
-  private async Task onIdChanged()
+  private void onChange(ChangeEventArgs e)
   {
-   if (Guid.TryParse(_input, out _id))
+   _input = e.Value.ToString();
+  }
+
+  private async Task onKeyUp(KeyboardEventArgs e)
+  {
+   if (e.Code == "Enter" || e.Code == "NumpadEnter")
    {
-    await updatePersonalNews();
-    StateHasChanged();
+    if (Guid.TryParse(_input, out _id))
+    {
+     await updatePersonalNews();
+     StateHasChanged();
+    }
    }
   }
 

@@ -35,7 +35,7 @@ namespace NewsMaking.AsconNews.Services
   {
    var content = new Dictionary<string, string>()
    {
-    { "AgentID", $"{UserID}" },
+    { "AgentID", $"{UserID.ToString().ToUpper()}" },
     { "Operation", "GetPersonalNews" }
    };
    List<NewsModel> list = new List<NewsModel>();
