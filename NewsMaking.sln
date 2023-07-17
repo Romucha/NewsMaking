@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsMaking.Receiver", "News
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsMaking.AsconNews", "NewsMaking.AsconNews\NewsMaking.AsconNews.csproj", "{C555B2C5-DE5F-4E65-8BB9-0DC1FE1912E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsMaking.Models", "NewsMaking.Models\NewsMaking.Models.csproj", "{BD4103BE-5455-4FEC-B332-D1A28C9FE9ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{C555B2C5-DE5F-4E65-8BB9-0DC1FE1912E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C555B2C5-DE5F-4E65-8BB9-0DC1FE1912E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C555B2C5-DE5F-4E65-8BB9-0DC1FE1912E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD4103BE-5455-4FEC-B332-D1A28C9FE9ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD4103BE-5455-4FEC-B332-D1A28C9FE9ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD4103BE-5455-4FEC-B332-D1A28C9FE9ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD4103BE-5455-4FEC-B332-D1A28C9FE9ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
