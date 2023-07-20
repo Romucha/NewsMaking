@@ -6,6 +6,7 @@ namespace NewsMaking.Models.Data
 	{
 		[Required]
 		[Range(1, int.MaxValue)]
+		[Key]
 		public int Id { get; set; }
 
 		[Required]

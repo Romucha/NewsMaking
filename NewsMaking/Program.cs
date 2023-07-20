@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.EntityFrameworkCore;
 using NewsMaking.Data;
+using NewsMaking.DataManagement;
+using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +11,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddDbContext<NewsDbContext>(options =>
+{
+	options.UseNpgsql(builder.Configuration.GetConnectionString("Default"));
+});
 
 var app = builder.Build();
 
