@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+builder.Services.AddAutoMapper(typeof(MapperInitializer));
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddDbContext<NewsDbContext>(options =>
 {
