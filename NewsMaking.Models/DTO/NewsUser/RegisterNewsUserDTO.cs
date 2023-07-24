@@ -8,14 +8,8 @@ using System.Threading.Tasks;
 
 namespace NewsMaking.Models.DTO.NewsUser
 {
-	public class RegisterNewsUserDTO
+	public class RegisterNewsUserDTO : LoginNewsUserDTO
 	{
-		[Required]
-		public string UserName { get; set; }
-
-		[Required]
-		public string Password { get; set; }
-
 		[Required]
 		[EmailAddress]
 		public string Email { get; set; }

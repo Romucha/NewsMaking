@@ -7,12 +7,17 @@ using System.Threading.Tasks;
 
 namespace NewsMaking.Models.DTO.NewsUser
 {
-	public class LoginNewsUserDTO
+	public class GetNewsUserDTO : DeleteNewsUserDTO
 	{
 		[Required]
-		public string UserName { get; set; }
+		public string Username { get; set; }
 
 		[Required]
-		public string Password { get; set; }
+		[EmailAddress]
+		public string Email { get; set; }
+
+		[Required]
+		[Phone]
+		public string PhoneNumber { get; set; }
 	}
 }
