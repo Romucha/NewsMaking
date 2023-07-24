@@ -2,7 +2,7 @@
 
 namespace NewsMaking.Models.Data
 {
-	public class News
+	internal class News
 	{
 		[Required]
 		[Range(1, int.MaxValue)]

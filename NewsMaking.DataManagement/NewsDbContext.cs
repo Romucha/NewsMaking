@@ -11,7 +11,7 @@ namespace NewsMaking.DataManagement
 
 		private readonly DbContextOptions<NewsDbContext> options;
 
-		public DbSet<News> News { get; set; } = default!;
+		internal DbSet<News> News { get; set; } = default!;
 
 		public NewsDbContext(IConfiguration configuration, DbContextOptions<NewsDbContext> options) : base(options)
 		{

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NewsMaking.Models.Data
 {
- public class NewsUser : IdentityUser
+ internal class NewsUser : IdentityUser
  {
   
  }
