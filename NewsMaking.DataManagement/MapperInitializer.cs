@@ -20,6 +20,7 @@ namespace NewsMaking.DataManagement
 			CreateMap<News, DeleteNewsDTO>().ReverseMap();
 
 			CreateMap<NewsUser, LoginNewsUserDTO>().ReverseMap();
+			CreateMap<NewsUser, LogoutNewsUserDTO>().ReverseMap();
 			CreateMap<NewsUser, RegisterNewsUserDTO>().ReverseMap();
 			CreateMap<NewsUser, DeleteNewsUserDTO>().ReverseMap();
 			CreateMap<NewsUser, GetNewsUserDTO>().ReverseMap();

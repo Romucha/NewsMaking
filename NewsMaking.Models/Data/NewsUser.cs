@@ -9,6 +9,5 @@ namespace NewsMaking.Models.Data
 {
  internal class NewsUser : IdentityUser
  {
-  
- }
+	}
 }
