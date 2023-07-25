@@ -9,8 +9,12 @@ namespace NewsMaking.DataManagement
 {
 	public interface INewsUserRepository
 	{
-		Task<bool> Login(LoginNewsUserDTO loginNewsUserDTO);
+		Task<bool> LoginAsync(LoginNewsUserDTO loginNewsUserDTO);
 
-		Task<bool> Logout()
+		Task<bool> LogoutAsync(LogoutNewsUserDTO logoutNewsUserDTO);
+
+		Task<bool> RegisterAsync(RegisterNewsUserDTO registerNewsUserDTO);
+
+		Task<bool> DeleteAsync(DeleteNewsUserDTO deleteNewsUserDTO);
 	}
 }
