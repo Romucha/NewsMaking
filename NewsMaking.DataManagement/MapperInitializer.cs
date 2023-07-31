@@ -10,20 +10,20 @@ using System.Threading.Tasks;
 
 namespace NewsMaking.DataManagement
 {
-	public class MapperInitializer : Profile
-	{
-		public MapperInitializer() 
-		{
-			CreateMap<News, CreateNewsDTO>().ReverseMap();
-			CreateMap<News, GetNewsDTO>().ReverseMap();
-			CreateMap<News, UpdateNewsDTO>().ReverseMap();
-			CreateMap<News, DeleteNewsDTO>().ReverseMap();
+    public class MapperInitializer : Profile
+    {
+        public MapperInitializer()
+        {
+            CreateMap<News, CreateNewsDTO>().ReverseMap();
+            CreateMap<News, GetNewsDTO>().ReverseMap();
+            CreateMap<News, UpdateNewsDTO>().ReverseMap();
+            CreateMap<News, DeleteNewsDTO>().ReverseMap();
 
-			CreateMap<NewsUser, LoginNewsUserDTO>().ReverseMap();
-			CreateMap<NewsUser, LogoutNewsUserDTO>().ReverseMap();
-			CreateMap<NewsUser, RegisterNewsUserDTO>().ReverseMap();
-			CreateMap<NewsUser, DeleteNewsUserDTO>().ReverseMap();
-			CreateMap<NewsUser, GetNewsUserDTO>().ReverseMap();
-		}
-	}
+            CreateMap<NewsUser, LoginNewsUserDTO>().ReverseMap();
+            CreateMap<NewsUser, LogoutNewsUserDTO>().ReverseMap();
+            CreateMap<NewsUser, RegisterNewsUserDTO>().ReverseMap();
+            CreateMap<NewsUser, DeleteNewsUserDTO>().ReverseMap();
+            CreateMap<NewsUser, GetNewsUserDTO>().ReverseMap();
+        }
+    }
 }

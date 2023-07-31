@@ -7,31 +7,36 @@ using System.Threading.Tasks;
 
 namespace NewsMaking.DataManagement
 {
-	public class NewsUserRepository : INewsUserRepository
-	{
-		public Task<bool> DeleteAsync(DeleteNewsUserDTO deleteNewsUserDTO)
-		{
-			throw new NotImplementedException();
-		}
+    public class NewsUserRepository : INewsUserRepository
+    {
+        public NewsUserRepository()
+        {
 
-		public Task<GetNewsUserDTO> GetNewsUserAsync(string id)
-		{
-			throw new NotImplementedException();
-		}
+        }
 
-		public Task<bool> LoginAsync(LoginNewsUserDTO loginNewsUserDTO)
-		{
-			throw new NotImplementedException();
-		}
+        public Task<bool> DeleteAsync(DeleteNewsUserDTO deleteNewsUserDTO)
+        {
+            throw new NotImplementedException();
+        }
 
-		public Task<bool> LogoutAsync(LogoutNewsUserDTO logoutNewsUserDTO)
-		{
-			throw new NotImplementedException();
-		}
+        public Task<GetNewsUserDTO> GetNewsUserAsync(string id)
+        {
+            throw new NotImplementedException();
+        }
 
-		public Task<bool> RegisterAsync(RegisterNewsUserDTO registerNewsUserDTO)
-		{
-			throw new NotImplementedException();
-		}
-	}
+        public Task<bool> LoginAsync(LoginNewsUserDTO loginNewsUserDTO)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> LogoutAsync(LogoutNewsUserDTO logoutNewsUserDTO)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> RegisterAsync(RegisterNewsUserDTO registerNewsUserDTO)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

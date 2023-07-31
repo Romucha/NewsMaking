@@ -16,5 +16,7 @@ namespace NewsMaking.DataManagement
 		Task<bool> RegisterAsync(RegisterNewsUserDTO registerNewsUserDTO);
 
 		Task<bool> DeleteAsync(DeleteNewsUserDTO deleteNewsUserDTO);
+
+		Task<GetNewsUserDTO> GetNewsUserAsync(string id);
 	}
 }

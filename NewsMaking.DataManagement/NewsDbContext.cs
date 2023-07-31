@@ -5,24 +5,24 @@ using NewsMaking.Models.Data;
 
 namespace NewsMaking.DataManagement
 {
-	public class NewsDbContext : IdentityDbContext
-	{
-		private readonly IConfiguration configuration;
+    public class NewsDbContext : IdentityDbContext
+    {
+        private readonly IConfiguration configuration;
 
-		private readonly DbContextOptions<NewsDbContext> options;
+        private readonly DbContextOptions<NewsDbContext> options;
 
-		internal DbSet<News> News { get; set; } = default!;
+        internal DbSet<News> News { get; set; } = default!;
 
-		public NewsDbContext(IConfiguration configuration, DbContextOptions<NewsDbContext> options) : base(options)
-		{
-			this.configuration = configuration;
-			this.options = options;
-			this.Database.EnsureCreated();
-		}
+        public NewsDbContext(IConfiguration configuration, DbContextOptions<NewsDbContext> options) : base(options)
+        {
+            this.configuration = configuration;
+            this.options = options;
+            this.Database.EnsureCreated();
+        }
 
-		protected override void OnModelCreating(ModelBuilder builder)
-		{
-			base.OnModelCreating(builder);
-		}
-	}
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
+    }
 }

@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace NewsMaking.DataManagement
 {
-	public interface INewsRepository
-	{
-		IEnumerable<GetNewsDTO>? GetAll();
+    public interface INewsRepository
+    {
+        IEnumerable<GetNewsDTO>? GetAll();
 
-		Task<GetNewsDTO>? GetByIdAsync(int id);
+        Task<GetNewsDTO>? GetByIdAsync(int id);
 
-		Task CreateNewsAsync(CreateNewsDTO newsDTO);
+        Task CreateNewsAsync(CreateNewsDTO newsDTO);
 
-		Task DeleteNewsAsync(int id);
+        Task DeleteNewsAsync(int id);
 
-		Task UpdateNewsAsync(UpdateNewsDTO newsDTO);
-	}
+        Task UpdateNewsAsync(UpdateNewsDTO newsDTO);
+    }
 }
