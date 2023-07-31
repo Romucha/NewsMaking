@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace NewsMaking.DataManagement
 {
-    public class NewsRepository : INewsRepository, IDisposable
+    internal class NewsRepository : INewsRepository, IDisposable
     {
         private readonly ILogger<NewsRepository> _logger;
 
