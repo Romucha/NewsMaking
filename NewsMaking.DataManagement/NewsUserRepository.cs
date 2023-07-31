@@ -13,9 +13,15 @@ namespace NewsMaking.DataManagement
 {
     internal class NewsUserRepository : INewsUserRepository
     {
+        private readonly IMapper _mapper;
+        private readonly ILogger<NewsUserRepository> _logger;
+        private readonly UserManager<NewsUser> _userManager;
+
         public NewsUserRepository(IMapper mapper, ILogger<NewsUserRepository> logger, UserManager<NewsUser> userManager)
         {
-            
+            _mapper = mapper;
+            _logger = logger;
+            _userManager = userManager;
         }
 
         public Task<bool> DeleteAsync(DeleteNewsUserDTO deleteNewsUserDTO)
