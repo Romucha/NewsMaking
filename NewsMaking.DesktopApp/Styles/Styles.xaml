@@ -118,29 +118,4 @@
             </Setter.Value>
         </Setter>
     </Style>
-
-    <!--  Express window style  -->
-    <Style
-        x:Key="{x:Type local:ExpressPanelView}"
-        BasedOn="{StaticResource BasicChromeWindow}"
-        TargetType="{x:Type local:ExpressPanelView}">
-        <Setter Property="MaxHeight" Value="800" />
-        <Setter Property="Width" Value="400" />
-        <Setter Property="Topmost" Value="True" />
-        <Setter Property="ShowInTaskbar" Value="False" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Window}" />
-            </Setter.Value>
-        </Setter>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Window}">
-                    <Border Background="{StaticResource BasicWindowColor}">
-                        <ContentPresenter Content="{TemplateBinding Content}" />
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
 </ResourceDictionary>

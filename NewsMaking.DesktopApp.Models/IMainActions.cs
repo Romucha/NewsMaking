@@ -10,8 +10,6 @@ namespace NewsMaking.DesktopApp.Models
     {
         Action OpenMainDisplayView { get; }
 
-        Action OpenExpressPanelView { get; }
-
         Action ApplicationShutdown { get; }
     }
 }

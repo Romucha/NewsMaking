@@ -13,8 +13,6 @@ namespace NewsMaking.DesktopApp.ViewModels.ModelImplementations
     {
         public Action OpenMainDisplayView => () => { new MainDisplayView().Show(); };
 
-        public Action OpenExpressPanelView => () => { new ExpressPanelView().Show(); };
-
         public Action ApplicationShutdown => () => { Application.Current.Shutdown(); };
     }
 }
